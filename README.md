@@ -1,1 +1,1 @@
-"# JavaCore_for_QA"
+GeekBrains course - JavaCore_for_QA
