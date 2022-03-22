@@ -1,6 +1,6 @@
 package Lesson1;
 
-public class Wall {
+public class Wall extends Obstacle{
     private double height;
 
     public Wall(double height) {
@@ -17,5 +17,10 @@ public class Wall {
 
     public double getTimeWall(IPlayers jumper) {
         return jumper.jump(this);
+    }
+
+    @Override
+    public void doIt(IPlayers player) {
+        player.jump(this);
     }
 }

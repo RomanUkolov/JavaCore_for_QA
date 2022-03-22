@@ -1,6 +1,6 @@
 package Lesson1;
 
-public class Track {
+public class Track extends Obstacle{
     private double length;
 
     public Track(double length) {
@@ -17,5 +17,10 @@ public class Track {
 
     public double getTimeTrack(IPlayers runner) {
         return runner.run(this);
+    }
+
+    @Override
+    public void doIt(IPlayers player) {
+        player.run(this);
     }
 }

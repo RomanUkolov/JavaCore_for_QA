@@ -1,6 +1,6 @@
 package Lesson1;
 
-public class Pool {
+public class Pool extends Obstacle {
     private double length;
 
     public Pool(double length) {
@@ -17,5 +17,9 @@ public class Pool {
 
     public double getTimePool(IPlayers swimmer) {
         return swimmer.swim(this);
+    }
+    @Override
+    public void doIt(IPlayers player) {
+        player.swim(this);
     }
 }
