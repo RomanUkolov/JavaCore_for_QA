@@ -1,9 +1,9 @@
 package Lesson1;
 
-public class Track extends Obstacle{
+public class Track extends Obstacle {
     private double length;
 
-    public Track(double length) {
+    public Track(int length) {
         this.length = length;
     }
 
@@ -11,7 +11,7 @@ public class Track extends Obstacle{
         return length;
     }
 
-    public void setLength(double length) {
+    public void setLength(int length) {
         this.length = length;
     }
 
@@ -19,8 +19,4 @@ public class Track extends Obstacle{
         return runner.run(this);
     }
 
-    @Override
-    public void doIt(IPlayers player) {
-        player.run(this);
-    }
 }

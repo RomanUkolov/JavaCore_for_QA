@@ -3,7 +3,7 @@ package Lesson1;
 public class Wall extends Obstacle{
     private double height;
 
-    public Wall(double height) {
+    public Wall(int height) {
         this.height = height;
     }
 
@@ -11,7 +11,7 @@ public class Wall extends Obstacle{
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
@@ -19,8 +19,5 @@ public class Wall extends Obstacle{
         return jumper.jump(this);
     }
 
-    @Override
-    public void doIt(IPlayers player) {
-        player.jump(this);
-    }
+
 }

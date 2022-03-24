@@ -3,7 +3,7 @@ package Lesson1;
 public class Pool extends Obstacle {
     private double length;
 
-    public Pool(double length) {
+    public Pool(int length) {
         this.length = length;
     }
 
@@ -11,15 +11,12 @@ public class Pool extends Obstacle {
         return length;
     }
 
-    public void setLength(double length) {
+    public void setLength(int length) {
         this.length = length;
     }
 
     public double getTimePool(IPlayers swimmer) {
         return swimmer.swim(this);
     }
-    @Override
-    public void doIt(IPlayers player) {
-        player.swim(this);
-    }
+
 }

@@ -1,8 +1,8 @@
 package Lesson1;
 
 public interface IPlayers {
-    double run(Track track);
-    double swim(Pool pool);
-    double jump(Wall wall);
-    void showResult();
+    public double run(Track track);
+    public double swim(Pool pool);
+    public double jump(Wall wall);
+    //void showResult();
 }
