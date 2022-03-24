@@ -3,7 +3,7 @@ package Lesson1;
 public class Pool extends Obstacle {
     private double length;
 
-    public Pool(int length) {
+    public Pool(double length) {
         this.length = length;
     }
 
@@ -11,7 +11,7 @@ public class Pool extends Obstacle {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(double length) {
         this.length = length;
     }
 

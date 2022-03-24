@@ -3,7 +3,7 @@ package Lesson1;
 public class Track extends Obstacle {
     private double length;
 
-    public Track(int length) {
+    public Track(double length) {
         this.length = length;
     }
 
@@ -11,7 +11,7 @@ public class Track extends Obstacle {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(double length) {
         this.length = length;
     }
 

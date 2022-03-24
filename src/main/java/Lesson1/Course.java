@@ -6,9 +6,9 @@ public class Course {
 
     Course(String nameCourse) {
         this.nameCourse = nameCourse;
-        obstacle[0] = new Pool(25);
-        obstacle[1] = new Track(100);
-        obstacle[2] = new Wall(5);
+        obstacle[0] = new Pool(25.0);
+        obstacle[1] = new Track(100.0);
+        obstacle[2] = new Wall(5.0);
     }
 
     public String getNameCourse() {
@@ -29,6 +29,6 @@ public class Course {
     }
     @Override
     public String toString() {
-        return nameCourse;
+        return nameCourse + " includes: ";
     }
 }

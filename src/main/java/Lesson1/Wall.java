@@ -3,7 +3,7 @@ package Lesson1;
 public class Wall extends Obstacle{
     private double height;
 
-    public Wall(int height) {
+    public Wall(double height) {
         this.height = height;
     }
 
@@ -11,7 +11,7 @@ public class Wall extends Obstacle{
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 

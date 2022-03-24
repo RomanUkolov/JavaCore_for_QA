@@ -8,8 +8,10 @@ public class Main {
 
         team.infoAboutPlayers();
         System.out.println(team);
-        c.infoAboutObstacle();
+        System.out.println();
         System.out.println(c);
+        c.infoAboutObstacle();
+
 
     }
 }

@@ -6,16 +6,20 @@ public class Team {
 
    public Team(String teamName) {
       this.teamName = teamName;
-      teamPlayers[0] = new Athlete1("Max", 5, 3, 1);
-      teamPlayers[1] = new Athlete2("John", 3, 6, 2);
-      teamPlayers[2] = new Athlete3("Will", 1, 1, 1);
-      teamPlayers[3] = new Athlete4("Rob", 3, 3, 3);
+      teamPlayers[0] = new Athlete1("Max", 5.0, 3.0, 1.2);
+      teamPlayers[1] = new Athlete2("John", 3.0, 6.0, 2.1);
+      teamPlayers[2] = new Athlete3("Will", 1.5, 1.0, 1.6);
+      teamPlayers[3] = new Athlete4("Rob", 3.2, 3.0, 3.1);
    }
    void infoAboutPlayers() {
-      System.out.println(teamPlayers);
+      for (IPlayers p : teamPlayers) {
+         System.out.println(p);
+      }
    }
+
    @Override
    public String toString() {
-      return teamName;
+      return "Team: " + teamName;
    }
+
 }

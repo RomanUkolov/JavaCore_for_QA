@@ -5,10 +5,10 @@ import org.jetbrains.annotations.NotNull;
 public abstract class Players implements IPlayers {
     private String name;
     private double runSpeed;
-    private int swimSpeed;
-    private int jumpHeight;
+    private double swimSpeed;
+    private double jumpHeight;
 
-    Players(String name, int runSpeed, int swimSpeed, int jumpHeight) {
+    Players(String name, double runSpeed, double swimSpeed, double jumpHeight) {
         this.name = name;
         this.runSpeed = runSpeed;
         this.swimSpeed = swimSpeed;
@@ -23,44 +23,46 @@ public abstract class Players implements IPlayers {
         this.name = name;
     }
 
-    public int getRunSpeed() {
+    public double getRunSpeed() {
         return runSpeed;
     }
 
-    public void setRunSpeed(int runSpeed) {
+    public void setRunSpeed(double runSpeed) {
         this.runSpeed = runSpeed;
     }
 
-    public int getSwimSpeed() {
+    public double getSwimSpeed() {
         return swimSpeed;
     }
 
-    public void setSwimSpeed(int swimSpeed) {
+    public void setSwimSpeed(double swimSpeed) {
         this.swimSpeed = swimSpeed;
     }
 
-    public int getJumpHeight() {
+    public double getJumpHeight() {
         return jumpHeight;
     }
 
-    public void setJumpHeight(int jumpHeight) {
+    public void setJumpHeight(double jumpHeight) {
         this.jumpHeight = jumpHeight;
     }
 
     public double swim(Pool pool) {
+        //double timeToOvercome = pool.getLength() / swimSpeed;
+        //return timeToOvercome;
         return pool.getLength() / swimSpeed;
     }
     public double jump(Wall wall) {
-        return  wall.getHeight() / jumpHeight;
+        return  wall.getHeight()/ jumpHeight;
     }
 
    public double run(Track track) {
-       return  track.getTimeTrack() / runSpeed;
+       return  track.getLength() / runSpeed;
     }
 
 
     @Override
     public String toString() {
-        return name + "swim: " + swimSpeed + "jump: " + jumpHeight + "run: " +runSpeed;
+        return "Name: " + name + " - swim: " + swimSpeed + " - jump: " + jumpHeight + " - run: " +runSpeed;
     }
 }
