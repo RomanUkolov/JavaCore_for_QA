@@ -19,14 +19,26 @@ public class Course {
         this.nameCourse = nameCourse;
     }
 
-    public void doIt(Team team) {
-
+    public Obstacle[] getObstacle() {
+        return obstacle;
     }
-    void  infoAboutObstacle() {
+
+    public void  infoAboutObstacle() {
         for (Obstacle obs : obstacle) {
-            System.out.println("includes:" + obs);
+            System.out.println("-> " + obs);
         }
     }
+
+    public void doIt(Team team) {
+        IPlayers[] teamPlayers = team.getTeamPlayers();
+        for (IPlayers p : teamPlayers) {
+                p.run((Track) obstacle[1]);
+                p.jump((Wall) obstacle[2]);
+                p.swim((Pool) obstacle[0]);
+            }
+        }
+
+
     @Override
     public String toString() {
         return nameCourse + " includes: ";

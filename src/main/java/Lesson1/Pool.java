@@ -2,9 +2,11 @@ package Lesson1;
 
 public class Pool extends Obstacle {
     private double length;
+    private String name;
 
     public Pool(double length) {
         this.length = length;
+        this.name = "Pool";
     }
 
     public double getLength() {
@@ -14,9 +16,14 @@ public class Pool extends Obstacle {
     public void setLength(double length) {
         this.length = length;
     }
+    @Override
+    public double getResult(IPlayers players) {
+        return players.swim(this);
+    }
 
-    public double getTimePool(IPlayers swimmer) {
-        return swimmer.swim(this);
+    @Override
+    public String toString() {
+        return name;
     }
 
 }

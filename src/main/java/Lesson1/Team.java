@@ -17,6 +17,22 @@ public class Team {
       }
    }
 
+   public IPlayers[] getTeamPlayers() {
+      return  teamPlayers;
+   }
+
+
+   public void showResults(Course course) {
+      Obstacle[] obstacles = course.getObstacle();
+      for (Obstacle obs : obstacles) {
+
+         System.out.println("Athlete - Max - Result:  " + obs.getResult(teamPlayers[0]));
+
+      }
+
+   }
+
+
    @Override
    public String toString() {
       return "Team: " + teamName;

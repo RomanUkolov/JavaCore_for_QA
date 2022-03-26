@@ -11,6 +11,8 @@ public class Main {
         System.out.println();
         System.out.println(c);
         c.infoAboutObstacle();
+        c.doIt(team);
+        team.showResults(c);
 
 
     }
