@@ -7,10 +7,12 @@ public class Main {
         Team team = new Team( "Wolfs");
 
         team.infoAboutPlayers();
+        System.out.println();
         System.out.println(team);
         System.out.println();
         System.out.println(c);
         c.infoAboutObstacle();
+        System.out.println();
         c.doIt(team);
         team.showResults(c);
 

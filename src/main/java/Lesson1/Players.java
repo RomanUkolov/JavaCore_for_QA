@@ -14,7 +14,7 @@ public abstract class Players implements IPlayers {
         this.swimSpeed = swimSpeed;
         this.jumpHeight = jumpHeight;
     }
-
+    @Override
     public String getName() {
         return name;
     }

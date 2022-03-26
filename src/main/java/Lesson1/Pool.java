@@ -17,8 +17,8 @@ public class Pool extends Obstacle {
         this.length = length;
     }
     @Override
-    public double getResult(IPlayers players) {
-        return players.swim(this);
+    public String getResult(IPlayers players) {
+        return "  Swim time: " + players.swim(this);
     }
 
     @Override

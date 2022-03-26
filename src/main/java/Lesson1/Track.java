@@ -17,8 +17,8 @@ public class Track extends Obstacle {
         this.length = length;
     }
     @Override
-    public double getResult(IPlayers players) {
-        return players.run(this);
+    public String getResult(IPlayers players) {
+        return "   Run time: " + players.run(this);
     }
 
     @Override

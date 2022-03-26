@@ -17,8 +17,8 @@ public class Wall extends Obstacle{
         this.height = height;
     }
     @Override
-    public double getResult(IPlayers players) {
-        return players.jump(this);
+    public String getResult(IPlayers players) {
+        return "  Jump time: " + players.jump(this);
     }
 
     @Override

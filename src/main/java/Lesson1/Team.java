@@ -21,17 +21,16 @@ public class Team {
       return  teamPlayers;
    }
 
-
    public void showResults(Course course) {
       Obstacle[] obstacles = course.getObstacle();
       for (Obstacle obs : obstacles) {
-
-         System.out.println("Athlete - Max - Result:  " + obs.getResult(teamPlayers[0]));
-
+         for (IPlayers p : teamPlayers) {
+            System.out.println(p.getName() +  obs.getResult(p));
+         }
+         System.out.println();
       }
 
    }
-
 
    @Override
    public String toString() {
