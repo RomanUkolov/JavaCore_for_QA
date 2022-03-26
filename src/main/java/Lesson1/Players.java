@@ -1,6 +1,11 @@
 package Lesson1;
-
-import org.jetbrains.annotations.NotNull;
+/**
+ * JavaCoreForQA_HomeWork1
+ *
+ * @autor Roman Ukolov
+ * @version 26.03.2022
+ *
+ */
 
 public abstract class Players implements IPlayers {
     private String name;
@@ -48,8 +53,7 @@ public abstract class Players implements IPlayers {
     }
 
     public double swim(Pool pool) {
-        //double timeToOvercome = pool.getLength() / swimSpeed;
-        //return timeToOvercome;
+
         return pool.getLength() / swimSpeed;
     }
     public double jump(Wall wall) {
