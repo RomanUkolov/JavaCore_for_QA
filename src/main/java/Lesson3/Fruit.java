@@ -1,2 +1,24 @@
-package Lesson3;public class Fruit {
+package Lesson3;
+/**
+ * JavaCoreForQA_HomeWork3
+ *
+ * @autor Roman Ukolov
+ * @version 30.03.2022
+ *
+ */
+
+public abstract class Fruit {
+    private float weight;
+
+    public Fruit(float weight) {
+        this.weight = weight;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
 }
