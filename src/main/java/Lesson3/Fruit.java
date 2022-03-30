@@ -1,4 +1,7 @@
 package Lesson3;
+
+import java.util.Objects;
+
 /**
  * JavaCoreForQA_HomeWork3
  *
@@ -21,4 +24,6 @@ public abstract class Fruit {
     public void setWeight(float weight) {
         this.weight = weight;
     }
+
+
 }
