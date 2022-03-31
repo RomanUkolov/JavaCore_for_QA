@@ -37,10 +37,14 @@ public class Box<F extends Fruit > {
     }
 
     public boolean compare(Box<?> boxes) {
-        if (getWeight() == boxes.getWeight()) {
-            return true;
+        return Math.abs(getWeight() - boxes.getWeight()) < 0.1;
+    }
+
+    public void changeBox(Box<F> box) {
+        for (F fruit : fruits) {
+            box.addFruit(fruit);
         }
-        return false;
+        fruits.clear();
     }
 
 
