@@ -25,5 +25,10 @@ public abstract class Fruit {
         this.weight = weight;
     }
 
-
+    @Override
+    public String toString() {
+        return "Fruit{" +
+                "weight=" + weight +
+                '}';
+    }
 }

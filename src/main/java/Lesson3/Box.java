@@ -10,11 +10,10 @@ import java.util.ArrayList;
  *
  */
 
-public class Box<F extends Fruit> {
+public class Box<F extends Fruit > {
     private ArrayList<F> fruits = new ArrayList<>();
-    private int count;
+
     public Box() {
-        count++;
     }
 
     public ArrayList<F> getFruits() {
@@ -28,13 +27,26 @@ public class Box<F extends Fruit> {
     public void addFruit(F fruit) {
         fruits.add(fruit);
     }
-/*
-    public float getWeight() {
 
+    public float getWeight() {
+        float boxWeight  = 0.0f;
+        for (int i = 0; i < fruits.size(); i++) {
+             boxWeight = boxWeight + fruits.get(i).getWeight();
+        }
+        return boxWeight;
     }
-*/
+
+    public boolean compare(Box<?> boxes) {
+        if (getWeight() == boxes.getWeight()) {
+            return true;
+        }
+        return false;
+    }
+
+
     @Override
     public String toString() {
-        return "In Box: " + "fruits - " + fruits;
+        return "In Box: " + "fruits - " + fruits.size();
     }
+
 }
