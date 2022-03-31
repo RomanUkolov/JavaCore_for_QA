@@ -1,6 +1,6 @@
 package Lesson2;
 /**
- * JavaCoreForQA_HomeWork
+ * JavaCoreForQA_HomeWork2
  *
  * @autor Roman Ukolov
  * @version 27.03.2022
