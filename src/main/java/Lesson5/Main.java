@@ -6,7 +6,7 @@ import java.util.Arrays;
  * JavaCoreForQA_HomeWork4
  *
  * @autor Roman Ukolov
- * @version 31.03.2022
+ * @version 05.04.2022
  *
  * 1. Реализовать сохранение данных в csv файл
  * 2. Реализовать загрузку данных из csv файла. Файл читается целиком
