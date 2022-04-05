@@ -1,4 +1,7 @@
 package Lesson5;
+
+import java.util.Arrays;
+
 /**
  * JavaCoreForQA_HomeWork4
  *
@@ -18,6 +21,8 @@ public class Main {
     public static void main(String[] args) {
         AppData appData = new AppData();
         appData.saveFile("test.cvs");
+        appData.loadFile("test.cvs");
+
 
 
 

@@ -9,10 +9,11 @@ package Lesson5;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AppData {
-    private String[] header = {"Value1", "Value2", "Value3"};
-    private int[][] data =  {{50, 74, 30}, {10, 28, 67}, {25, 99, 100}};
+    private String[] header = {"Value1", "Value2", "Value35"};
+    private Integer[][] data = {{50, 74, 30}, {10, 28, 67}, {25, 99, 100}};
 
     public String[] getHeader() {
         return header;
@@ -22,25 +23,19 @@ public class AppData {
         this.header = header;
     }
 
-    public int[][] getData() {
+    public Integer[][] getData() {
         return data;
     }
 
-    public void setData(int[][] data) {
+    public void setData(Integer[][] data) {
         this.data = data;
     }
 
     public AppData() {
     }
 
-    public  void saveFile(String fileName) {
-        /*
-        try (PrintWriter printWriter = new PrintWriter(new FileWriter(fileName)).) {
-            printWriter.write(Arrays.toString(header));
+    public void saveFile(String fileName) {
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
             for (int i = 0; i < header.length; i++) {
                 bufferedWriter.write(header[i] + "; ");
@@ -51,10 +46,29 @@ public class AppData {
                 for (int j = 0; j < data[i].length; j++) {
                     bufferedWriter.write(data[i][j] + "; ");
                 }
-                    bufferedWriter.write("\n");
+                bufferedWriter.write("\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    public void loadFile(String fileName) {
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
+            header = bufferedReader.readLine().split("; ");
+            for (int i = 0; i < header.length; i++) {
+                System.out.print(header[i] + "; ");
+            }
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
 }

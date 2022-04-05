@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b110aada-967d-4134-b0e8-6a21db052e1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson3/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson3/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson3/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson3/Fruit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson5/AppData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson5/AppData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson5/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson3.Main" />
+      <option name="MAIN_CLASS_NAME" value="Lesson5.Main" />
       <module name="JavaCore_for_QA" />
       <method v="2">
         <option name="Make" enabled="true" />
