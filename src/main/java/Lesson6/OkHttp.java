@@ -14,10 +14,28 @@ public class OkHttp {
                 .readTimeout(10, TimeUnit.SECONDS)
                 .build();
         HttpUrl url = new HttpUrl.Builder()
-                .scheme()
-                .host()
-                .addPathSegment()
+                .scheme("https")
+                .host("dataservice.accuweather.com")
+                .addPathSegment("/forecasts")
+                .addPathSegment("/v1")
+                .addPathSegment("/daily")
+                .addPathSegment("/5day")
+                .addPathSegment("/1046")
+                .addQueryParameter("apikey", "QV1Xv1bAeAc4F6RLVdhTgSjeAC9pzFxH")
                 .build();
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .build();
+
+        Response response = okHttpClient.newCall(request).execute();
+
+        System.out.println(response.code());
+        System.out.println(response.body());
+
+        String body = response.body().string();
+        System.out.println(body);
 
 
 
