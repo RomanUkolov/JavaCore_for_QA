@@ -3,17 +3,15 @@ package Lesson5;
  * JavaCoreForQA_HomeWork4
  *
  * @autor Roman Ukolov
- * @version 31.03.2022
+ * @version 05.04.2022
  *
  */
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class AppData {
     private String[] header = {"Value1", "Value2", "Value35"};
-    private Integer[][] data = {{50, 74, 30}, {10, 28, 67}, {25, 99, 100}};
+    private Integer[][] data = {{50, 74, 30}, {10, 28, 67}, {25, 50, 100}};
 
     public String[] getHeader() {
         return header;
@@ -60,15 +58,16 @@ public class AppData {
             for (int i = 0; i < header.length; i++) {
                 System.out.print(header[i] + "; ");
             }
-
+            System.out.println();
+            String temp;
+            while ((temp = bufferedReader.readLine()) != null) {
+                System.out.println(temp);
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-
 }
