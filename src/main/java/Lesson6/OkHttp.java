@@ -13,6 +13,11 @@ public class OkHttp {
                 .newBuilder()
                 .readTimeout(10, TimeUnit.SECONDS)
                 .build();
+        HttpUrl url = new HttpUrl.Builder()
+                .scheme()
+                .host()
+                .addPathSegment()
+                .build();
 
 
 
