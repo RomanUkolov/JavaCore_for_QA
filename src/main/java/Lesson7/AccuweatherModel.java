@@ -1,4 +1,5 @@
 package Lesson7;
+import com.fasterxml.jackson.databind.JsonNode;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -51,7 +52,16 @@ public class AccuweatherModel implements WeatherModel {
 
                 Response oneDayForecastResponse = okHttpClient.newCall(request).execute();
                 String weatherResponse = oneDayForecastResponse.body().string();
-                System.out.println(weatherResponse);
+                //System.out.println(weatherResponse);
+
+                System.out.println("Погода в " + selectedCity + " на дату");
+                JsonNode oneDayNode = objectMapper.readTree(weatherResponse);
+                JsonNode dailyForecastsOneDay = oneDayNode.get("DailyForecasts");
+                for (int i = 0; i < dailyForecastsOneDay.size(); i++) {
+                    System.out.println(dailyForecastsOneDay.get(i).get("Date").asText());
+                }
+
+
                 break;
             case FIVE_DAYS:
                 HttpUrl httpUrl1 = new HttpUrl.Builder()
@@ -73,7 +83,20 @@ public class AccuweatherModel implements WeatherModel {
 
                 Response fiveDayForecastResponse = okHttpClient.newCall(requestFiveDay).execute();
                 String weatherResponseFiveDay = fiveDayForecastResponse.body().string();
-                System.out.println(weatherResponseFiveDay);
+                //System.out.println(weatherResponseFiveDay);
+
+                System.out.println("Погода в " + selectedCity + " на дату ");
+                JsonNode fiveDayNode = objectMapper.readTree(weatherResponseFiveDay);
+                JsonNode dailyForecastsFiveDay = fiveDayNode.get("DailyForecasts");
+                for (int i = 0; i < dailyForecastsFiveDay.size(); i++) {
+                    //System.out.println( "  " + dailyForecastsFiveDay.get(i).get("Date").asText());
+                    String date5Day = dailyForecastsFiveDay.get(i).get("Date").asText();
+                   // String temperature = String.valueOf(dailyForecastsFiveDay.get(i).get("Value").asDouble());
+                    //JsonNode temperNode = dailyForecastsFiveDay.get()
+
+                    System.out.println(date5Day);
+                }
+                System.out.println();
 
                 break;
         }

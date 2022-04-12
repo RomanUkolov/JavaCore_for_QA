@@ -17,7 +17,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         AccuweatherModel accuweatherModel = new AccuweatherModel();
-        accuweatherModel.getWeather("Moscow", Period.NOW);
+        accuweatherModel.getWeather("Moscow", Period.FIVE_DAYS);
 
 
     }

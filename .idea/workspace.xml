@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b110aada-967d-4134-b0e8-6a21db052e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/AccuweatherModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/Period.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/WeatherModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/AccuweatherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/AccuweatherModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,11 +116,25 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.NullPointerException" memberName="detailMessage" />
         <PinnedItemInfo parentTag="okhttp3.HttpUrl" memberName="fragment" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((NullPointerException)NullPointerException2407_DebugLabel).detailMessage" custom="java.lang.NullPointerException" />
+        <watch expression="((NullPointerException)NullPointerException2407_DebugLabel).detailMessage" language="JAVA" custom="java.lang.NullPointerException" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
