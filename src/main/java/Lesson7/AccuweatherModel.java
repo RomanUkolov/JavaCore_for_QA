@@ -54,13 +54,23 @@ public class AccuweatherModel implements WeatherModel {
                 String weatherResponse = oneDayForecastResponse.body().string();
                 //System.out.println(weatherResponse);
 
-                System.out.println("Погода в " + selectedCity + " на дату");
+                System.out.println("Погода в " + selectedCity);
                 JsonNode oneDayNode = objectMapper.readTree(weatherResponse);
                 JsonNode dailyForecastsOneDay = oneDayNode.get("DailyForecasts");
                 for (int i = 0; i < dailyForecastsOneDay.size(); i++) {
-                    System.out.println(dailyForecastsOneDay.get(i).get("Date").asText());
+                    //System.out.println(dailyForecastsOneDay.get(i).get("Date").asText());
+                    String dateDay = dailyForecastsOneDay.get(i).get("Date").asText();
+                    String temperatureUnit =
+                            dailyForecastsOneDay.get(i).get("Temperature").get("Minimum").get("Unit").asText();
+                    String temperatureMin =
+                            dailyForecastsOneDay.get(i).get("Temperature").get("Minimum").get("Value").asText();
+                    String temperatureMax =
+                            dailyForecastsOneDay.get(i).get("Temperature").get("Maximum").get("Value").asText();
+                    String weatherDay =
+                            dailyForecastsOneDay.get(i).get("Day").get("IconPhrase").asText();
+                    System.out.println("Дата: " + dateDay + " Ожидается: " + weatherDay + " / Мин. " + temperatureMin + " " + temperatureUnit
+                            + " / Макс. " + temperatureMax + " " + temperatureUnit);
                 }
-
 
                 break;
             case FIVE_DAYS:
@@ -85,19 +95,24 @@ public class AccuweatherModel implements WeatherModel {
                 String weatherResponseFiveDay = fiveDayForecastResponse.body().string();
                 //System.out.println(weatherResponseFiveDay);
 
-                System.out.println("Погода в " + selectedCity + " на дату ");
+                System.out.println("Погода в " + selectedCity);
                 JsonNode fiveDayNode = objectMapper.readTree(weatherResponseFiveDay);
                 JsonNode dailyForecastsFiveDay = fiveDayNode.get("DailyForecasts");
                 for (int i = 0; i < dailyForecastsFiveDay.size(); i++) {
                     //System.out.println( "  " + dailyForecastsFiveDay.get(i).get("Date").asText());
                     String date5Day = dailyForecastsFiveDay.get(i).get("Date").asText();
-                   // String temperature = String.valueOf(dailyForecastsFiveDay.get(i).get("Value").asDouble());
-                    //JsonNode temperNode = dailyForecastsFiveDay.get()
-
-                    System.out.println(date5Day);
+                    String temperatureUnit =
+                            dailyForecastsFiveDay.get(i).get("Temperature").get("Minimum").get("Unit").asText();
+                    String temperatureMin =
+                            dailyForecastsFiveDay.get(i).get("Temperature").get("Minimum").get("Value").asText();
+                    String temperatureMax =
+                            dailyForecastsFiveDay.get(i).get("Temperature").get("Maximum").get("Value").asText();
+                    String weatherDay =
+                            dailyForecastsFiveDay.get(i).get("Day").get("IconPhrase").asText();
+                    System.out.println("Дата: " + date5Day + " Ожидается: " + weatherDay + " / Мин. " + temperatureMin + " " + temperatureUnit
+                            + " / Макс. " + temperatureMax + " " + temperatureUnit);
                 }
-                System.out.println();
-
+                //System.out.println();
                 break;
         }
     }
