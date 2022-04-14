@@ -7,6 +7,7 @@ import okhttp3.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class AccuweatherModel implements WeatherModel {
     //http://dataservice.accuweather.com/forecasts/v1/daily/5day/
@@ -100,6 +101,7 @@ public class AccuweatherModel implements WeatherModel {
                 System.out.println("Погода в " + selectedCity);
                 JsonNode fiveDayNode = objectMapper.readTree(weatherResponseFiveDay);
                 JsonNode dailyForecastsFiveDay = fiveDayNode.get("DailyForecasts");
+                //String[] weatherInfo = new String[5];
                 for (int i = 0; i < dailyForecastsFiveDay.size(); i++) {
                     //System.out.println( "  " + dailyForecastsFiveDay.get(i).get("Date").asText());
                     String date5Day = dailyForecastsFiveDay.get(i).get("Date").asText();
@@ -111,10 +113,20 @@ public class AccuweatherModel implements WeatherModel {
                             dailyForecastsFiveDay.get(i).get("Temperature").get("Maximum").get("Value").asText();
                     String weatherDay =
                             dailyForecastsFiveDay.get(i).get("Day").get("IconPhrase").asText();
-                    System.out.println("Дата: " + date5Day + " Ожидается: " + weatherDay + " / Мин. " + temperatureMin + " " + temperatureUnit
-                            + " / Макс. " + temperatureMax + " " + temperatureUnit);
-                }
-                //System.out.println();
+                    System.out.println("Дата: " + date5Day + " Ожидается: " + weatherDay + " / Мин. " +
+                                        temperatureMin + " " + temperatureUnit + " / Макс. " +
+                                        temperatureMax + " " + temperatureUnit);
+
+                   /* for (i = 0; i < 5; i++) {
+                        weatherInfo[i] =
+                                ("Дата: " + date5Day + " Ожидается: " + weatherDay + " / Мин. " + temperatureMin + " " +
+                                temperatureUnit + " / Макс. " + temperatureMax + " " + temperatureUnit);
+                    */
+                    }
+                    //System.out.println(weather);
+                    //for (String s : weatherInfo) {
+                        //System.out.println(Arrays.toString(weatherInfo));
+                    //}
                 break;
         }
     }
