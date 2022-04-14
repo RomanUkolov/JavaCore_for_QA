@@ -57,6 +57,8 @@ public class AccuweatherModel implements WeatherModel {
                 System.out.println("Погода в " + selectedCity);
                 JsonNode oneDayNode = objectMapper.readTree(weatherResponse);
                 JsonNode dailyForecastsOneDay = oneDayNode.get("DailyForecasts");
+                //String dateDay = dailyForecastsOneDay.get(0).get("Date").asText();
+                //System.out.println(dateDay);
                 for (int i = 0; i < dailyForecastsOneDay.size(); i++) {
                     //System.out.println(dailyForecastsOneDay.get(i).get("Date").asText());
                     String dateDay = dailyForecastsOneDay.get(i).get("Date").asText();
