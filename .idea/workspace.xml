@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b110aada-967d-4134-b0e8-6a21db052e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/DataBaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/Weather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/AccuweatherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/AccuweatherModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/WeatherModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/WeatherModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,14 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson5.Main" />
+      <module name="JavaCore_for_QA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lesson7.Main" />
       <module name="JavaCore_for_QA" />
       <extension name="coverage">
@@ -63,13 +73,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson5.Main" />
-      <module name="JavaCore_for_QA" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

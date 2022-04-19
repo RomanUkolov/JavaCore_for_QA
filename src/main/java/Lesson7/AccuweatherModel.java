@@ -7,7 +7,7 @@ import okhttp3.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.List;
 
 public class AccuweatherModel implements WeatherModel {
     //http://dataservice.accuweather.com/forecasts/v1/daily/5day/
@@ -30,6 +30,9 @@ public class AccuweatherModel implements WeatherModel {
 
     private static final OkHttpClient okHttpClient = new OkHttpClient();
     private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    private DataBaseRepository dataBaseRepository = new DataBaseRepository();
+
 
 
     @Override
@@ -156,5 +159,10 @@ public class AccuweatherModel implements WeatherModel {
         String cityKey = objectMapper.readTree(responseString).get(0).at("/Key").asText();
 
         return cityKey;
+    }
+
+    @Override
+    public List<Weather> getSavedToDBWeather() {
+        return dataBaseRepository.getSavedToDBWeather();
     }
 }
