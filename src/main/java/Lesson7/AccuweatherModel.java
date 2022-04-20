@@ -7,6 +7,7 @@ import okhttp3.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class AccuweatherModel implements WeatherModel {
@@ -63,19 +64,29 @@ public class AccuweatherModel implements WeatherModel {
                 JsonNode dailyForecastsOneDay = oneDayNode.get("DailyForecasts");
                 //String dateDay = dailyForecastsOneDay.get(0).get("Date").asText();
                 //System.out.println(dateDay);
+                String dateDay = null;
+                String temperatureMax = null;
+                double temperature = Double.parseDouble(temperatureMax);
+
                 for (int i = 0; i < dailyForecastsOneDay.size(); i++) {
                     //System.out.println(dailyForecastsOneDay.get(i).get("Date").asText());
-                    String dateDay = dailyForecastsOneDay.get(i).get("Date").asText();
+                     dateDay = dailyForecastsOneDay.get(i).get("Date").asText();
                     String temperatureUnit =
                             dailyForecastsOneDay.get(i).get("Temperature").get("Minimum").get("Unit").asText();
                     String temperatureMin =
                             dailyForecastsOneDay.get(i).get("Temperature").get("Minimum").get("Value").asText();
-                    String temperatureMax =
+                    temperatureMax =
                             dailyForecastsOneDay.get(i).get("Temperature").get("Maximum").get("Value").asText();
                     String weatherDay =
                             dailyForecastsOneDay.get(i).get("Day").get("IconPhrase").asText();
                     System.out.println("Дата: " + dateDay + " Ожидается: " + weatherDay + " / Мин. " + temperatureMin + " " + temperatureUnit
                             + " / Макс. " + temperatureMax + " " + temperatureUnit);
+                }
+                
+                try {
+                    dataBaseRepository.saveWeatherToDataBase(new Weather(selectedCity,dateDay, temperature));
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
 
                 break;
@@ -112,13 +123,13 @@ public class AccuweatherModel implements WeatherModel {
                             dailyForecastsFiveDay.get(i).get("Temperature").get("Minimum").get("Unit").asText();
                     String temperatureMin =
                             dailyForecastsFiveDay.get(i).get("Temperature").get("Minimum").get("Value").asText();
-                    String temperatureMax =
+                    String temperature5Max =
                             dailyForecastsFiveDay.get(i).get("Temperature").get("Maximum").get("Value").asText();
                     String weatherDay =
                             dailyForecastsFiveDay.get(i).get("Day").get("IconPhrase").asText();
                     System.out.println("Дата: " + date5Day + " Ожидается: " + weatherDay + " / Мин. " +
                                         temperatureMin + " " + temperatureUnit + " / Макс. " +
-                                        temperatureMax + " " + temperatureUnit);
+                                        temperature5Max + " " + temperatureUnit);
 
                    /* for (i = 0; i < 5; i++) {
                         weatherInfo[i] =
